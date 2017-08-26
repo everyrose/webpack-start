@@ -1,0 +1,15 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "webpack": "^3.5.5"
+  }
+}
