@@ -4,12 +4,17 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
-        app:'./src/index.js',
+        app: './src/index.js',
         print: './src/print.js'
     },
     output: {
         filename: '[name].bundle.js', // [name] - entry name
         path: path.resolve(__dirname, 'dist')
+    },
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase:
+            './dist'
     },
     plugins: [
         new CleanWebpackPlugin(['dist']), // to clean dist every time
@@ -17,15 +22,17 @@ module.exports = {
             title: 'Output management'
         })
     ],
-    module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader'
-                ]
-            }
-        ]
-    }
-};
+    module:
+        {
+            rules: [
+                {
+                    test: /\.css$/,
+                    use: [
+                        'style-loader',
+                        'css-loader'
+                    ]
+                }
+            ]
+        }
+}
+;

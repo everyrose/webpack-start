@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import './style.css';
+import './css/style.css';
 import {printMe} from './print.js';
 
 function component() {
@@ -9,7 +9,7 @@ function component() {
     element.classList.add('hello');
 
     let btn = document.createElement('button');
-    btn.innerHTML = 'Click me and check the console!';
+    btn.innerHTML = 'Click me and check the ssss!';
     btn.onclick = printMe;
 
     element.appendChild(btn);
